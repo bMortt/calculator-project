@@ -1,0 +1,26 @@
+{
+  "name": "calc-proj",
+  "version": "1.0.0",
+  "description": "Simple Calculator",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bMortt/calculator-project.git"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "bMortt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bMortt/calculator-project/issues"
+  },
+  "homepage": "https://github.com/bMortt/calculator-project#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

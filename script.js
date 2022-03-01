@@ -14,9 +14,15 @@ for (let i = 0; i < numericButtons.length; i++) {
     })
 };
 
+
+
 clearButton.addEventListener('click', () => {
     displayInput.value = "";
     displayResult.value = "";
+});
+
+resultButton.addEventListener('click', () => {
+    
 })
 
 
