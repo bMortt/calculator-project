@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Always remember to link your stylesheet here! -->
+    <link src="style.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <main id="calc-wrapper">
+        <!-- This section will display the numbers and result -->
+        <section id="input-output">
+            <!-- The number inputs (in text format)-->
+            <input type="text" class="display" id="num-input">
+            <!-- The result (in text format)-->
+            <input type="text" class="display" id="num-output">            
+        </section>
+
+        <!-- This section is for the Clear button and the Result button -->
+        <section id="clear-result">
+            <input type="button" class="btn" id="clear" value="C" onClick="clear()">
+            <input type="button" class="btn" id="result" value="=" onClick="solve()">
+        </section>
+
+        <!-- This is the Numeric Keypad section plus the (.) and (,) buttons -->
+        <section class="number-keypad" id="numkey">
+            <input type="button" class="btn" id="btn-1" value="1" onClick="dis('1')">
+            <input type="button" class="btn" id="btn-2" value="2" onClick="dis('2')">
+            <input type="button" class="btn" id="btn-3" value="3" onClick="dis('3')">
+            <input type="button" class="btn" id="btn-4" value="4" onClick="dis('4')">
+            <input type="button" class="btn" id="btn-5" value="5" onClick="dis('5')">
+            <input type="button" class="btn" id="btn-6" value="6" onClick="dis('6')">
+            <input type="button" class="btn" id="btn-7" value="7" onClick="dis('7')">
+            <input type="button" class="btn" id="btn-8" value="8" onClick="dis('8')">
+            <input type="button" class="btn" id="btn-9" value="9" onClick="dis('9')">
+            <input type="button" class="btn" id="btn-." value="." onClick="dis('.')">
+            <input type="button" class="btn" id="btn-0" value="0" onClick="dis('0')">
+            <input type="button" class="btn" id="btn-," value="," onClick="dis(',')">
+        </section>
+
+        <!-- This is the Mathematical Operators keypad -->
+        <section id="operators-keypad">
+            <input type="button" class="btn" id="btn+" value="+" onClick="dis('+')">            
+            <input type="button" class="btn" id="btn-" value="-" onClick="dis('-')">            
+            <input type="button" class="btn" id="btn*" value="*" onClick="dis('*')">            
+            <input type="button" class="btn" id="btn/" value="/" onClick="dis('/')">            
+        </section>
+    </main>
+</body>
+<!-- I put the script after the body finishes loading for better performance (good practice!) -->
+<script src="script.js" rel="text/script"></script>
+</html>
