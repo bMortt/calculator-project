@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto:wght@100;300;400;500;700&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  font-family: "League Gothic", sans-serif;
+  font-size: 1.2rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  position: relative;
+  border: 0.1rem solid black;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  background-color: #242424;
+  color: #fff;
+  font-size: 2rem;
+  size: stretch;
+  border: 0.1rem solid black;
+}
+.btn:hover {
+  background-color: #8c8c8c;
+  color: #242424;
+}
+.btn:active {
+  background-color: black;
+  color: #fff;
+}
+
+main {
+  box-sizing: border-box;
+  position: absolute;
+  width: 50%;
+  height: 99%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 35% 65%;
+  border: 0.1rem solid black;
+}
+main #input-output {
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/4;
+  height: 100%;
+  width: 99%;
+}
+main #input-output .display {
+  background-color: #0b0b0b;
+  width: 100%;
+  height: 48%;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #cccccc;
+  text-align: center;
+  border: 1px solid gray;
+}
+main #input-output .display::placeholder {
+  color: #8c8c8c;
+  font-size: 1.2rem;
+  text-align: start;
+}
+main #numkey {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+main #numkey #clear {
+  background-color: #47070f;
+}
+main #numkey #clear:hover {
+  background-color: #760b19;
+  color: #b3b3b3;
+}
+main #numkey #clear:active {
+  background-color: #190205;
+}
+main #operators-keypad {
+  grid-row: 2;
+  grid-column: 3;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 18.77% 18.77% 18.77% 18.77% 25%;
+}
+main #operators-keypad #result {
+  grid-row: 5;
+  background-color: #0d3806;
+}
+main #operators-keypad #result:hover {
+  background-color: #1a6e0d;
+  color: #b3b3b3;
+}
+main #operators-keypad #result:active {
+  background-color: #020a01;
+}
+main #operators-keypad #btn-plus, main #operators-keypad #btn-minus, main #operators-keypad #btn-multiply, main #operators-keypad #btn-division {
+  background-color: #130521;
+}
+main #operators-keypad #btn-plus:hover, main #operators-keypad #btn-minus:hover, main #operators-keypad #btn-multiply:hover, main #operators-keypad #btn-division:hover {
+  background-color: #2c0c4d;
+  color: #b3b3b3;
+}
+main #operators-keypad #btn-plus:active, main #operators-keypad #btn-minus:active, main #operators-keypad #btn-multiply:active, main #operators-keypad #btn-division:active {
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

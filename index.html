@@ -5,27 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Always remember to link your stylesheet here! -->
-    <link src="style.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
     <title>Calculator</title>
 </head>
 <body>
-    <main id="calc-wrapper">
+    <main id="wrapper">
         <!-- This section will display the numbers and result -->
-        <section id="input-output">
-            <!-- The number inputs (in text format)-->
-            <input type="text" class="display" id="num-input">
-            <!-- The result (in text format)-->
-            <input type="text" class="display" id="num-output">            
-        </section>
+        <section class="container" id="input-output">
+            <!-- The number inputs -->
+            <input type="text" class="display" id="num-input" placeholder="Input">
+            <!-- The result -->
+            <input type="text" class="display" id="num-output" placeholder="Result">                      
+        </section>        
 
-        <!-- This section is for the Clear button and the Result button -->
-        <section id="clear-result">
-            <input type="button" class="btn" id="clear" value="C">
-            <input type="button" class="btn" id="result" value="=">
-        </section>
-
-        <!-- This is the Numeric Keypad section plus the (.) and (,) buttons -->
-        <section class="number-keypad" id="numkey">
+        <!-- This is the Numeric Keypad section plus the (Clear) and (.) buttons -->
+        <section class="container" id="numkey">            
             <input type="button" class="btn" id="btn-1" value="1">
             <input type="button" class="btn" id="btn-2" value="2">
             <input type="button" class="btn" id="btn-3" value="3">
@@ -35,17 +29,18 @@
             <input type="button" class="btn" id="btn-7" value="7">
             <input type="button" class="btn" id="btn-8" value="8">
             <input type="button" class="btn" id="btn-9" value="9">
-            <input type="button" class="btn" id="btn-." value=".">
+            <input type="button" class="btn" id="clear" value="C">
             <input type="button" class="btn" id="btn-0" value="0">
-            <input type="button" class="btn" id="btn-," value=",">
+            <input type="button" class="btn" id="btn-point" value=".">            
         </section>
 
-        <!-- This is the Mathematical Operators keypad -->
-        <section id="operators-keypad">
-            <input type="button" class="btn" id="btn+" value="+">            
-            <input type="button" class="btn" id="btn-" value="-">            
-            <input type="button" class="btn" id="btn*" value="*">            
-            <input type="button" class="btn" id="btn/" value="/">            
+        <!-- This is the Mathematical Operators + Result button keypad -->
+        <section class="container" id="operators-keypad">
+            <input type="button" class="btn" id="btn-plus" value="+">            
+            <input type="button" class="btn" id="btn-minus" value="-">            
+            <input type="button" class="btn" id="btn-multiply" value="*">            
+            <input type="button" class="btn" id="btn-division" value="/">
+            <input type="button" class="btn" id="result" value="=">            
         </section>
     </main>
 </body>

@@ -4,16 +4,10 @@ const displayInput = document.getElementById('num-input');
 const clearButton = document.getElementById('clear');
 const resultButton = document.getElementById('result');
 const numericButtonsSection = document.getElementById('numkey');
-const numericButtons = numericButtonsSection.children;
+const numericButtons = numericButtonsSection.children; // Returns an HTMLCollection
 const operatorsSection = document.getElementById('operators-keypad');
-const operatorsButtons = operatorsSection.children;
+const operatorsButtons = operatorsSection.children; // Returns an HTMLCollection
 
-// Function that will solve the Math in the displayInput field
-function solve(value) {
-    let x = value;
-    let y = eval(x);
-    return y;
-};
 
 // For loop that will add the eventListeners to all the numeric buttons.
 // I used the .children property on numericButtons, so we`d get an HTMLCollection
@@ -27,7 +21,7 @@ for (let i = 0; i < numericButtons.length; i++) {
 
 // For loop that will add the eventListeners to all the mathematical operators.
 // I also used the .children property here for the same reason as the first for loop.
-for (let i = 0; i < operatorsButtons.length; i++) {
+for (let i = 0; i < (operatorsButtons.length - 1); i++) { // - 1 so it will leave the result button off, since we`re going to set it separatedly.
     operatorsButtons[i].addEventListener('click', () => {
         let opValue = operatorsButtons[i].value;
         displayInput.value = displayInput.value + opValue;
@@ -35,20 +29,21 @@ for (let i = 0; i < operatorsButtons.length; i++) {
 };
 
 // Here we have an eventListener for the Clear button, it will reset the values of both 
-// Input and Output fields to blank.
+// of the Input and Output fields to blank.
 clearButton.addEventListener('click', () => {
     displayInput.value = "";
     displayResult.value = "";
 });
 
-// Here we use the solve() function we`ve created above to solve the mathematical input
-// of the Input field and display it on the Output(Result) field.
+// Here we set our result button, we use an if/else statement to check if the
+// displayInput field is empty (thus resulting in an 'undefined' result), and
+// if it isn`t empty, it will return the evaluation of the displayInput values.
 resultButton.addEventListener('click', () => {
-    displayResult.value = solve(displayInput.value);
-})
+    if (eval(displayInput.value) === undefined) {
+        displayResult.value = "";
+    } else {
+    displayResult.value = eval(displayInput.value);
+    }
+});
 
 
-// TO DO: 
-//     - try to validate the inputs and find a way to format the input field to only
-// accept 1 operator at a time.
-//     - Style the calculator.
